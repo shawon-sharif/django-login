@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>prac3app</title>
+  </head>
+  <body>
+
+
+
+
+      <table border="2">
+        <tr>
+         <th>{{ heading}}</th>
+        </tr>
+      </table>
+      <table border="1">
+
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Position </th>
+        </tr>
+          {% for row in playerlist %}
+        <tr>
+             <td>{{row.first_name}}</td>
+             <td>{{row.last_name}}</td>
+             <td>{{row.position}}</td>
+        </tr>
+          {% endfor %}
+      </table>
+
+   <a href="/signup/"> Add new Player </a>
+
+
+
+      <table border="1">
+        <tr>
+          <th>Flayer name </th>
+          <th>Club</th>
+          <th>Relase Money</th>
+          <th>Join Date </th>
+          <th>fifa_rating</th>
+        </tr>
+          {% for col in pd %}
+          <tr>
+            <td>{{col.athlate}}</td>
+            <td>{{col.club}}</td>
+            <td>{{col.release_money}}</td>
+            <td>{{col.join_date}}</td>
+            <td>{{col.fifa_rating}}</td>
+          </tr>
+            {% endfor %}
+      </table>
+
+
+  </body>
+</html>
